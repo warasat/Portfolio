@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        /*padding-top:5%;
+      padding-bottom: 5%;*/
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-width: 1px;
+        margin-bottom: 60px;
+      }
+      .left {
+        width: 30%;
+        height: 650px;
+        background-color: none;
+        border-right-style: solid;
+        border-width: 1px;
+      }
+      .right {
+        width: 70%;
+        background-color: none;
+      }
+      .advance {
+        font-style: normal;
+        font-weight: bold;
+        display: inline-flex;
+        display: flex;
+      }
+      .preview {
+        display: flex;
+        justify-content: space-around;
+      }
+      .button-1 {
+        background-color: rgb(196, 192, 192);
+        color: black;
+        border-style: none;
+        height: 35px;
+        cursor: pointer;
+      }
+      .button-2 {
+        background-color: rgb(196, 192, 192);
+        color: black;
+        border-style: none;
+        height: 35px;
+        cursor: pointer;
+      }
+      .button-3 {
+        background-color: rgb(196, 192, 192);
+        color: black;
+        border-style: none;
+        height: 35px;
+        cursor: pointer;
+      }
+      .navbar {
+        color: grey;
+      }
+      .navbar li {
+        list-style-type: none;
+      }
+      .product {
+        display: flex;
+        margin-left: 60%;
+        height: 20%;
+      }
+      .search-criteria {
+        margin-left: 5%;
+        height: 10%;
+      }
+      .advance i {
+        margin-left: 1%;
+        height: 10%;
+      }
+      .First-Preview {
+        display: inline-block;
+        width: 40%;
+      }
+      .Item-name-outline {
+      }
+      .Item-name-title {
+        display: flex;
+        width: 122%;
+        height: 20%;
+        padding-left: 5%;
+      }
+
+      .SKU-Preview {
+        display: inline-block;
+        width: 40%;
+      }
+      .SKU-name-outline {
+        margin-left: 30%;
+      }
+      .SKU-name-title {
+        display: flex;
+        width: 122%;
+        height: 20%;
+        padding-left: 5%;
+        margin-left: 30%;
+      }
+      hr.solid {
+        border-top: 1px solid;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        padding: 0px;
+      }
+
+      tr:nth-child() {
+        background-color: #f2f2f2;
+      }
+      .btn {
+        color: black;
+        font-size: 28px;
+      }
+      .class-A {
+        color: green;
+        font-weight: bold;
+        position: relative;
+      }
+      .class-A::before {
+        content: url("supersimple.dev _ Learn Software Engineering_files/channel-2.jpeg"); /* Specify the path to your image */
+        margin-right: 10px; /* Adjust spacing between image and text */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: auto;
+      }
+      .class-A .compatible-devices {
+        color: grey;
+        font-weight: normal;
+      }
+      .stock {
+        background-color: rgb(197, 227, 239);
+        border: none;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px; /* Add margin top to create space */
+      }
+
+      
+      .right-button {
+        background-color: rgb(50, 109, 75);
+        color: whitesmoke;
+        border-style: none;
+        height: 30px;
+        width: 100px;
+        cursor: pointer;
+      }
+      .left-button {
+        background-color:white ;
+        color: rgb(50, 109, 75);
+        border-style: none;
+        height: 35px;
+        cursor: pointer;
+        margin-left: 1300PX;
+      }
+      .container {
+        position: relative; /* Make the container relative */
+      }
+
+      .button-container {
+        position: absolute;
+        bottom: -45px; /* Adjust as needed */
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="advance">
+      <p>Advance Search</p>
+      <input class="product" type="text" placeholder="product" />
+      <input
+        class="search-criteria"
+        type="text"
+        placeholder="Search Criteria"
+      />
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <p>Saved Filters</p>
+        <div class="preview">
+          <button class="button-1">Battery Replacement</button>
+          <button class="button-2">Water Damage</button>
+          <button class="button-3">volume button</button>
+        </div>
+        <p>Browse by Categories</p>
+        <header>
+          <nav class="navbar">
+            <ul>
+              <li>&#9662;&#9634;Mobile Devices(124)</li>
+              <ul>
+                <li>&#9634;Smartphones(80)</li>
+                <li>&#9634;Tablets(22)</li>
+                <li>&#9634;Feature Phones(4)</li>
+              </ul>
+              <li>&#9662;&#9634;Computers(80)</li>
+              <ul>
+                <li>&#9634;Laptops(4)</li>
+                <li>&#9634;Desktops(4)</li>
+                <li>&#9634;All-in-one PCs(4)</li>
+              </ul>
+              <li>&#9662;&#9634;Gaming Consoles(20)</li>
+              <ul>
+                <li>&#9634;Xbox(4)</li>
+                <li>&#9634;Play station(4)</li>
+                <li>&#9634;Ninetendo switch(4)</li>
+              </ul>
+              <li>&#9662;&#9634;wearables(10)</li>
+              <ul>
+                <li>&#9634;Subcategory 4.1</li>
+                <li>&#9634;Subcategory 4.2</li>
+                <li>&#9634;Subcategory 4.3</li>
+              </ul>
+              <li>&#9662;&#9634;Acessories(13)</li>
+              <ul>
+                <li>&#9634;Subcategory 5.1</li>
+                <li>&#9634;Subcategory 5.2</li>
+                <li>&#9634;Subcategory 5.3</li>
+              </ul>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="right">
+        <div class="First-Preview">
+          <p class="Item-name-outline">Item Name</p>
+          <input class="Item-name-title" type="text" placeholder="Product" />
+        </div>
+
+        <div class="SKU-Preview">
+          <p class="SKU-name-outline">SKU/UPC/IMEI</p>
+          <input class="SKU-name-title" type="text" placeholder="Product" />
+        </div>
+        <hr />
+        <table>
+          <thead>
+            <tr>
+              <th>&#9634;</th>
+              <th>Item</th>
+              <th>SKU/UPC</th>
+              <th>Stock</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&#9634;</td>
+              <td>
+                <p class="class-A">
+                  2422-Smartphone Stand-Single Port-Rose Gold <br /><span
+                    class="compatible-devices"
+                    >Compatible Devices</span
+                  >
+                </p>
+                <button>Iphone12</button>
+                <button>Iphone13</button>
+                <button>+2</button>
+              </td>
+              <td>019129419002</td>
+              <td><button class="stock">0</button></td>
+              <td>$102.00</td>
+              <td>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>&#9634;</td>
+              <td>
+                <p class="class-A">
+                  2422-Laptop Colling Pad-Dual Port-Deep Blue <br /><span
+                    class="compatible-devices"
+                    >Compatible Devices</span
+                  >
+                </p>
+                <button>Iphone12</button>
+                <button>Iphone13</button>
+                <button>+2</button>
+              </td>
+              <td>019114221424</td>
+              <td><button class="stock">12</button></td>
+              <td>$102.00</td>
+              <td>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>&#9634;</td>
+              <td>
+                <p class="class-A">
+                  2422-Electric Kettle-Single Port-Stainless steal <br /><span
+                    class="compatible-devices"
+                    >Compatible Devices</span
+                  >
+                </p>
+                <button>Iphone12</button>
+                <button>Iphone13</button>
+                <button>+2</button>
+              </td>
+              <td>019145612323</td>
+              <td><button class="stock">0</button></td>
+              <td>$102.00</td>
+              <td>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>&#9634;</td>
+              <td>
+                <p class="class-A">
+                  2422-Noise-Canceling Headphones-Dual Port-charcoal<br /><span
+                    class="compatible-devices"
+                    >Compatible Devices</span
+                  >
+                </p>
+                <button>Iphone12</button>
+                <button>Iphone13</button>
+                <button>+2</button>
+              </td>
+              <td>019151533522</td>
+              <td><button class="stock">12</button></td>
+              <td>$102.00</td>
+              <td>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>&#9634;</td>
+              <td>
+                <p class="class-A">
+                  2422-Executive Desk Organizer-Triple POrt-Mahogany<br /><span
+                    class="compatible-devices"
+                    >Compatible Devices</span
+                  >
+                </p>
+                <button>Iphone12</button>
+                <button>Iphone13</button>
+                <button>+2</button>
+              </td>
+              <td>019124524525</td>
+              <td><button class="stock">0</button></td>
+              <td>$102.00</td>
+              <td>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>&#9634;</td>
+              <td>
+                <p class="class-A">
+                  2422-Memory Form Travel Pillow-Single Port-teal <br /><span
+                    class="compatible-devices"
+                    >Compatible Devices</span
+                  >
+                </p>
+                <button>Iphone12</button>
+                <button>Iphone13</button>
+                <button>+2</button>
+              </td>
+              <td>0191256225114</td>
+              <td><button class="stock">12</button></td>
+              <td>$102.00</td>
+              <td>
+                <button><i class="fas fa-shopping-cart"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="left-button"><i class="fa fa-refresh"></i>Reset</button>
+      <button class="right-button"><i class="fa fa-file-text-o"></i>Save Filter</button>
+    </div>
+  </body>
+</html>
