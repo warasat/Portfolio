@@ -136,3 +136,42 @@ export const services = [
     desc: 'Configuring secure service boundaries, production hosting on AWS/Vercel, and local tunneling setups.',
   },
 ]
+export const experiences = [
+  {
+    role: 'Full Stack Developer (PSEB Apprenticeship)',
+    company: 'Geniteam Solutions',
+    duration: 'Nov 2025 - May 2026',
+    description:
+      'Worked extensively on enterprise-grade SaaS products and client contracts using MERN/PERN stacks. Specialized in integrating AI capabilities and streamlining complex background workflows.',
+    highlights: [
+      'Developed an Email Alias Management MVP with Next.js and PostgreSQL, embedding Stripe subscriptions and Mailgun mail routing.',
+      'Designed SkillGo, an agentic AI-driven smart workflow concept leveraging RAG architectures and LangGraph.',
+      'Executed a comprehensive frontend overhaul for an AI Game Builder SaaS, refactoring legacy code into React, TypeScript, and Tailwind CSS.',
+      'Engineered a real-time Chat Application with Socket.IO and OpenAI APIs for advanced AI tool call processing.'
+    ],
+  },
+  {
+    role: 'Freelance Full Stack Engineer',
+    company: 'Remote & International Contracts',
+    duration: '2025 - 2026',
+    description:
+      'Delivered end-to-end web applications for international clients, focused on creating high-performance e-commerce systems and custom management solutions.',
+    highlights: [
+      'Architected and deployed a multi-tenant E-commerce SaaS featuring localized Stripe payments, automated global tax scaling, and an advanced analytics dashboard for orders and sales tracking.',
+      'Developed a custom, high-traffic web platform tailored for a Mexico-based client, ensuring fully responsive UI/UX and high availability backend architecture.',
+      'Gathered business requirements directly from overseas clients to scope out MVPs, manage deployment lifecycles on AWS, and establish continuous integration.'
+    ],
+  },
+  {
+    role: 'Full Stack Developer (Final Year Project)',
+    company: 'University Graduation Project',
+    duration: '2025',
+    description:
+      'Co-authored and engineered "Doccure", a production-ready healthcare and clinic-management portal solving real-world scheduling and data bottlenecks.',
+    highlights: [
+      'Built a comprehensive Doctor-Patient Management System featuring automated appointment booking, smart calendars, and role-based access control.',
+      'Created intuitive medical dashboards for doctors and patients using React and Node.js, storing dynamic medical records securely in MongoDB.',
+      'Achieved full deployment on Vercel with high UX performance and optimized API call handling.'
+    ],
+  }
+]

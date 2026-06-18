@@ -5,6 +5,7 @@ import SkillsSection from './sections/SkillsSection.jsx'
 import ProjectsSection from './sections/ProjectsSection.jsx'
 import ServicesSection from './sections/ServicesSection.jsx'
 import ContactSection from './sections/ContactSection.jsx'
+import ExperienceSection from './sections/ExperienceSection.jsx'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <ProjectsSection />
         <ServicesSection />
         <ContactSection />
+        <ExperienceSection />
       </main>
 
       <Footer />
