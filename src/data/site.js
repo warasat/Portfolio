@@ -6,7 +6,7 @@ export const site = {
   email: 'warasatwarraich@gmail.com',
   links: {
     github: 'https://github.com/warasat',
-    linkedin: 'https://www.linkedin.com/in/your-link-here',
+    linkedin: 'https://www.linkedin.com/in/warasat-ali/',
   },
 }
 
