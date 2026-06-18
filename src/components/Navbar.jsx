@@ -11,6 +11,9 @@ export default function Navbar() {
 
   const ids = useMemo(() => navItems.map((n) => n.id), [])
 
+  // Filter out contact from the regular list links to avoid duplication
+  const filteredNavItems = useMemo(() => navItems.filter(item => item.id !== 'contact'), [])
+
   useEffect(() => {
     const observers = []
 
@@ -56,22 +59,16 @@ export default function Navbar() {
             onClick={onNav('home')}
             className="group inline-flex items-center gap-2 font-semibold tracking-tight"
           >
-            {/* Image Container Wrapper */}
             <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10">
               <span className="absolute inset-0 bg-gradient-to-br from-blue-500/25 to-cyan-400/20 opacity-0 transition group-hover:opacity-100" />
-              
-              {/* Aapki Profile Image yahan render ho rahi hai */}
               <img 
                 src="/images/ID_PIC-removebg-preview.png" 
                 alt={site.name}
                 className="h-full w-full object-cover relative z-10"
                 onError={(e) => {
-                  // Agar image path galat ho ya load na ho toh hidden ho jaye aur background text "WA" nazar aaye
                   e.target.style.display = 'none';
                 }}
               />
-              
-              {/* Fallback Text: Agar image na load ho toh yeh backup dega */}
               <span className="absolute text-xs font-bold text-slate-300 uppercase">WA</span>
             </span>
             
@@ -80,8 +77,9 @@ export default function Navbar() {
             </span>
           </a>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
+            {filteredNavItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
@@ -96,7 +94,15 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a className="btn-primary ml-2" href="#contact" onClick={onNav('contact')}>
+            {/* Keeping only the main highlighted CTA button */}
+            <a 
+              className={cx(
+                "btn-primary ml-2 text-sm transition-all",
+                active === 'contact' ? 'ring-2 ring-blue-500' : ''
+              )} 
+              href="#contact" 
+              onClick={onNav('contact')}
+            >
               Contact
             </a>
           </nav>
@@ -108,33 +114,19 @@ export default function Navbar() {
             onClick={() => setOpen((v) => !v)}
           >
             <span className="h-5 w-5 relative block">
-              <span
-                className={cx(
-                  'absolute left-0 top-1 block h-[2px] w-5 bg-slate-100 transition',
-                  open ? 'translate-y-[6px] rotate-45' : '',
-                )}
-              />
-              <span
-                className={cx(
-                  'absolute left-0 top-[9px] block h-[2px] w-5 bg-slate-100 transition',
-                  open ? 'opacity-0' : '',
-                )}
-              />
-              <span
-                className={cx(
-                  'absolute left-0 top-[17px] block h-[2px] w-5 bg-slate-100 transition',
-                  open ? 'translate-y-[-6px] -rotate-45' : '',
-                )}
-              />
+              <span className={cx('absolute left-0 top-1 block h-[2px] w-5 bg-slate-100 transition', open ? 'translate-y-[6px] rotate-45' : '')} />
+              <span className={cx('absolute left-0 top-[9px] block h-[2px] w-5 bg-slate-100 transition', open ? 'opacity-0' : '')} />
+              <span className={cx('absolute left-0 top-[17px] block h-[2px] w-5 bg-slate-100 transition', open ? 'translate-y-[-6px] -rotate-45' : '')} />
             </span>
           </button>
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       <div className={cx('md:hidden border-t border-white/10', open ? 'block' : 'hidden')}>
         <div className="container-x py-3">
           <div className="grid gap-1">
-            {navItems.map((item) => (
+            {filteredNavItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
@@ -149,7 +141,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a className="btn-primary mt-2" href="#contact" onClick={onNav('contact')}>
+            <a className="btn-primary mt-2 text-center text-sm" href="#contact" onClick={onNav('contact')}>
               Contact
             </a>
           </div>
