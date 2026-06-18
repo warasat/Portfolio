@@ -50,21 +50,14 @@ export default function ProjectCard({ project }) {
 
         <div className="mt-5 flex flex-wrap gap-3">
           <a
-            className="btn-ghost"
+            className="btn-primary"
             href={links.github}
             target="_blank"
             rel="noreferrer"
           >
             GitHub
           </a>
-          <a
-            className="btn-primary"
-            href={links.live}
-            target={links.live?.startsWith('http') ? '_blank' : undefined}
-            rel={links.live?.startsWith('http') ? 'noreferrer' : undefined}
-          >
-            Live Demo
-          </a>
+          
         </div>
       </div>
     </article>
