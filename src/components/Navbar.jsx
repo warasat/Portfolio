@@ -62,7 +62,7 @@ export default function Navbar() {
               
               {/* Aapki Profile Image yahan render ho rahi hai */}
               <img 
-                src="/public/images/ID_PIC-removebg-preview.png" 
+                src="/images/ID_PIC-removebg-preview.png" 
                 alt={site.name}
                 className="h-full w-full object-cover relative z-10"
                 onError={(e) => {
