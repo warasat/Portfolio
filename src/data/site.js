@@ -47,7 +47,7 @@ export const projects = [
     summary:
       'Healthcare app with appointments, dashboards, and production-ready UX.',
     tech: ['React', 'Node.js', 'MongoDB', 'Vercel'],
-    image: '/public/images/DocCure.png',
+    image: '/images/DocCure.png', // Fixed: removed /public
     youtubeId: 'dQw4w9WgXcQ',
     links: {
       github: 'https://github.com/warasat',
@@ -59,7 +59,7 @@ export const projects = [
     summary:
       'Multi-tenant storefront + admin with payments, orders, and analytics.',
     tech: ['React', 'Express', 'PostgreSQL', 'Prisma', 'Stripe', 'AWS'],
-    image: '/public/images/E_Commerce_SaaS.png',
+    image: '/images/E_Commerce_SaaS.png', // Fixed: removed /public
     youtubeId: 'dQw4w9WgXcQ',
     links: {
       github: 'https://github.com/warasat',
@@ -71,10 +71,9 @@ export const projects = [
     summary:
       'A secure MVP platform featuring dedicated Admin & User portals, integrated with Stripe for subscriptions and Mailgun for seamless email routing.',
     tech: ['NextJs', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Stripe', 'Mailgun', 'AWS', 'Ngrok'],
-    image: '/public/images/Email_Alias_management.png',
+    image: '/images/Email_Alias_management.png', // Fixed: removed /public
     youtubeId: 'dQw4w9WgXcQ',
     links: {
-      // Company project hone ki wajah se github link excluded hai
       live: '#',
     },
   },
@@ -83,10 +82,9 @@ export const projects = [
     summary:
       'Executed a complete frontend redesign and UI overhaul, migrating legacy styling to a modern React-TypeScript structure using an HTML reference site.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'HTML', 'Vercel'],
-    image: '/public/images/AIGameBuilder.png',
+    image: '/images/AIGameBuilder.png', // Fixed: removed /public
     youtubeId: 'dQw4w9WgXcQ',
     links: {
-      // Company project hone ki wajah se github link excluded hai
       live: '#',
     },
   },
@@ -95,7 +93,7 @@ export const projects = [
     summary:
       'Intern project: chat experience enhanced with AI features and smart tools.',
     tech: ['React', 'Node.js', 'Socket.IO', 'OpenAI', 'Vercel'],
-    image: '/public/images/Chat_App.png',
+    image: '/images/Chat_App.png', // Fixed: removed /public
     youtubeId: 'dQw4w9WgXcQ',
     links: {
       github: 'https://github.com/warasat',
@@ -107,7 +105,7 @@ export const projects = [
     summary:
       'Intern project: agentic AI concept for personalized skill-building workflows.',
     tech: ['RAG', 'LangGraph', 'Node.js', 'MongoDB', 'Vercel'],
-    image: '/public/images/SkillGo.png',
+    image: '/images/skillGo.png', // Fixed: matched GitHub lowercase 's' and removed /public
     youtubeId: 'dQw4w9WgXcQ',
     links: {
       github: 'https://github.com/warasat',
